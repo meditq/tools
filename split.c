@@ -7,7 +7,7 @@ char **split(char *str, int *n){
 	int i = 0;
 	while(1){
 		if(str == NULL) break;
-		while(*str != ' ') str++;
+		while(*str == ' ') str++;
 		if(*str == '\0') break;
 		t = strchr(str, ' ');
 		if(t != NULL) *t = '\0';
