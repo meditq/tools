@@ -8,5 +8,6 @@ typedef struct _array {
 array array_new(void);
 int push(array a, int val);
 int pop(array a);
+void array_print(array a);
 void array_free(array a);
 #endif
