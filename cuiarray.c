@@ -54,7 +54,6 @@ int main(int argc, char **argv){
 				}
 			}else if(!strcmp(list[0], "print")){
 				array_print(a);
-				puts("not implemented");
 				printf("Size: %d, Heap size: %d\n", a->size, a->heapsize);
 			}else{
 				puts("unknown command");
