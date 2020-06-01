@@ -39,7 +39,7 @@ int shrink(array a){
 }
 	
 int push(array a, int val){
-	if(!expand(a)) return 1;
+	if(expand(a)) return 1;
 	a->vs[a->size++] = val;
 	return 0;
 }
