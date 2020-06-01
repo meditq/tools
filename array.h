@@ -1,6 +1,6 @@
 #ifndef ARRAY_H
 #define ARRAY_H
-struct _array {
+typedef struct _array {
 	int size, heapsize;
 	int *vs;
 } * array;
