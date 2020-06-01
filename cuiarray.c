@@ -31,7 +31,7 @@ int main(void){
 							fprintf(stderr, "error: push failed\n");
 							return 1;
 						}
-						/* array_print(); */
+						array_print(a);
 					}else{
 						puts("invalid argument");
 					}
@@ -43,16 +43,16 @@ int main(void){
 					fprintf(stderr, "error: push failed\n");
 					return 1;
 				}
-				/* array_print(); */
+				array_print(a);
 			}else if(!strcmp(list[0], "pop") || !strcmp(list[0], "o")){
 				if(a->size > 0){
 					printf("%d\n", pop(a));
-					/* array_print(); */
+					array_print(a);
 				}else{
 					puts("pop failed");
 				}
 			}else if(!strcmp(list[0], "print")){
-				/* array_print(); */
+				array_print(a);
 				puts("not implemented");
 				printf("Size: %d, Heap size: %d\n", a->size, a->heapsize);
 			}else{
