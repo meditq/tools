@@ -3,11 +3,12 @@
 #include <string.h>
 #include <time.h>
 #include <limits.h>
+#include <unistd.h>
 #include <readline/readline.h>
 #include "split.h"
 #include "array.h"
 
-int main(void){
+int main(int argc, char **argv){
 	printf("Test program for array\nCopyright (c) 2020 medit, MIT License\n\n");
 	array a = array_new();
 	if(a == NULL){
