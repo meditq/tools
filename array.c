@@ -50,6 +50,16 @@ int pop(array a){
 	return val;
 }
 
+void array_print(array a){
+	printf("[");
+	if(a->size > 0){
+		printf("%d", a->vs[0]);
+		for(int i = 1; i < a->size; i++) printf(", %d", a->vs[i]);
+	}
+	printf("]\n");
+	return;
+}
+
 void array_free(array a){
 	free(a->vs);
 	free(a);
