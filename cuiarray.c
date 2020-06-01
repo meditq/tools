@@ -26,7 +26,7 @@ int main(void){
 				if(n > 1){
 					char *p;
 					long val = strtol(list[1], &p, 10);
-					if(p != list[1] && val <= INT_MAX){
+					if(p != list[1] && val >= INT_MIN && val <= INT_MAX){
 						if(push(a, val)){
 							fprintf(stderr, "error: push failed\n");
 							return 1;
