@@ -39,7 +39,7 @@ int shrink(array a){
 }
 	
 int push(array a, int val){
-	if(!expand(a)) return 1;
+	if(expand(a)) return 1;
 	a->vs[a->size++] = val;
 	return 0;
 }
@@ -47,7 +47,7 @@ int push(array a, int val){
 int pop(array a){
 	int val = a->vs[--a->size];
 	shrink(a);
-	return a;
+	return val;
 }
 
 void array_free(array a){
