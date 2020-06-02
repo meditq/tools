@@ -50,7 +50,7 @@ int main(int argc, char **argv){
 					printf("%d\n", pop(a));
 					array_print(a);
 				}else{
-					puts("pop failed");
+					puts("empty");
 				}
 			}else if(!strcmp(list[0], "print")){
 				array_print(a);
