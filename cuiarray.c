@@ -52,6 +52,24 @@ int main(int argc, char **argv){
 				}else{
 					puts("empty");
 				}
+			}else if(!strcmp(list[0], "add")){
+				if(n > 1){
+					char *p;
+					long val = strtol(list[1], &p, 10);
+					if(p != list[1] && val > 0 && val <= INT_MAX){
+						for(int i = 1; i <= val; i++){
+							if(push(a, rand() % 10000)){
+								fprintf(stderr, "error: push #%d failed\n", i);
+								return 1;
+							}
+						}
+						array_print(a);
+					}else{
+						puts("invalid argument");
+					}
+				}else{
+					puts("insufficient argument");
+				}
 			}else if(!strcmp(list[0], "print")){
 				array_print(a);
 				printf("Size: %d, Heap size: %d\n", a->size, a->heapsize);
