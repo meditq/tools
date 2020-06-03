@@ -9,7 +9,7 @@
 #include "array.h"
 
 int main(int argc, char **argv){
-	printf("Test program for array\nCopyright (c) 2020 medit, MIT License\n\n");
+	printf("Interactive test program for array\nCopyright (c) 2020 medit\n\n");
 	array a = array_new();
 	if(a == NULL){
 		fprintf(stderr, "error: array_new() failed\n");
@@ -21,16 +21,15 @@ int main(int argc, char **argv){
 	while(1){
 		str = readline("array> ");
 		list = split(str, &n);
-		if(n > 0){
+		if(n >= 1){
 			if(!strcmp(list[0], "exit")) break;
 			else if(!strcmp(list[0], "push")){
-				if(n > 1){
+				if(n >= 2){
 					char *p;
 					long val = strtol(list[1], &p, 10);
 					if(p != list[1] && val >= INT_MIN && val <= INT_MAX){
 						if(push(a, val)){
-							fprintf(stderr, "error: push failed\n");
-							return 1;
+							puts("push failed");
 						}
 						array_print(a);
 					}else{
@@ -41,8 +40,7 @@ int main(int argc, char **argv){
 				}
 			}else if(!strcmp(list[0], "i")){
 				if(push(a, rand() % 10000)){
-					fprintf(stderr, "error: push failed\n");
-					return 1;
+					puts("push failed");
 				}
 				array_print(a);
 			}else if(!strcmp(list[0], "pop") || !strcmp(list[0], "o")){
@@ -53,14 +51,14 @@ int main(int argc, char **argv){
 					puts("empty");
 				}
 			}else if(!strcmp(list[0], "add")){
-				if(n > 1){
+				if(n >= 2){
 					char *p;
 					long val = strtol(list[1], &p, 10);
 					if(p != list[1] && val > 0 && val <= INT_MAX){
 						for(int i = 1; i <= val; i++){
 							if(push(a, rand() % 10000)){
-								fprintf(stderr, "error: push #%d failed\n", i);
-								return 1;
+								printf("push #%d failed\n", i);
+								break;
 							}
 						}
 						array_print(a);
@@ -72,7 +70,11 @@ int main(int argc, char **argv){
 				}
 			}else if(!strcmp(list[0], "print")){
 				array_print(a);
+			}else if(!strcmp(list[0], "size")){
 				printf("Size: %d, Heap size: %d\n", a->size, a->heapsize);
+			}else if(!strcmp(list[0], "help")){
+				if(n >= 2) puts("Individual help for each command is not implemented.");
+				printf("Available commands are:\nexit, push, pop, i, o, add, print, size, help\n");
 			}else{
 				puts("unknown command");
 			}
@@ -80,6 +82,6 @@ int main(int argc, char **argv){
 		free(list);
 		free(str);
 	}
-	puts("Bye");
+	puts("bye");
 	return 0;
 }
