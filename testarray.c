@@ -82,6 +82,7 @@ int main(int argc, char **argv){
 		free(list);
 		free(str);
 	}
+	array_free(a);
 	puts("bye");
 	return 0;
 }
