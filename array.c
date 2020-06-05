@@ -50,7 +50,21 @@ int pop(array a){
 	return val;
 }
 
-void array_print(array a){
+array array_dup(const array a){
+	array b = array_new();
+	if(b == NULL) return NULL;
+	b->vs = realloc(b->vs, sizeof(int) * a->heapsize);
+	if(b->vs == NULL){
+		array_free(b);
+		return NULL;
+	}
+	b->heapsize = a->heapsize;
+	for(int i = 0; i < a->size; i++) b->vs[i] = a->vs[i];
+	b->size = a->size;
+	return b;
+}
+
+void array_print(const array a){
 	printf("[");
 	if(a->size > 0){
 		printf("%d", a->vs[0]);
