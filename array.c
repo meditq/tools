@@ -74,6 +74,20 @@ void array_print(const array a){
 	return;
 }
 
+void array_sort_bubble(array a){
+	int i, j, t;
+	for(i = a->size - 1; i > 0; i--){
+		for(j = 0; j < i; j++){
+			if(a->vs[j] > a->vs[j + 1]){
+				t = a->vs[j];
+				a->vs[j] = a->vs[j + 1];
+				a->vs[j + 1] = t;
+			}
+		}
+	}
+	return;
+}
+
 void array_free(array a){
 	free(a->vs);
 	free(a);

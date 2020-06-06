@@ -10,5 +10,6 @@ int push(array a, int val);
 int pop(array a);
 array array_dup(const array a);
 void array_print(const array a);
+void array_sort_bubble(array a);
 void array_free(array a);
 #endif
