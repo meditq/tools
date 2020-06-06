@@ -1,4 +1,4 @@
-PROGRAMS = testsplit testarray table readfile duptest
+PROGRAMS = testsplit testarray table readfile duptest sort
 
 all: $(PROGRAMS)
 
@@ -15,6 +15,9 @@ readfile: readfile.o array.o
 	gcc -o $@ $^
 
 duptest: duptest.o array.o
+	gcc -o $@ $^
+
+sort: sort.o array.o
 	gcc -o $@ $^
 
 .c.o:
