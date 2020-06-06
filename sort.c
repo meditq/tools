@@ -49,7 +49,7 @@ Sort mode options:\n\
   Other modes are not implemented yet.\n\
 \n\
 Output options:\n\
-  -t    measure and display the execution time\n\
+  -t    measure and display execution time\n\
   -v    display contents of the array before and after sorting\n\
 \n\
 General options:\n\
