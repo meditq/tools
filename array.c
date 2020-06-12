@@ -88,6 +88,19 @@ void array_sort_bubble(array a){
 	return;
 }
 
+void array_sort_insertion(array a){
+	int i, j, k, t;
+	for(i = 1; i < a->size; i++){
+		for(j = 0; j < i && a->vs[j] <= a->vs[i]; j++);
+		if(j < i){
+			t = a->vs[i];
+			for(k = i; k > j; k--) a->vs[k] = a->vs[k - 1];
+			a->vs[j] = t;
+		}
+	}
+	return;
+}
+
 void array_free(array a){
 	free(a->vs);
 	free(a);
