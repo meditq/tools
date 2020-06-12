@@ -24,10 +24,13 @@ int main(int argc, char **argv){
 	char buf[4096], *p, c;
 	array a;
 	struct timeval before, after;
-	while((c = getopt(argc, argv, "bhtv?")) != -1){
+	while((c = getopt(argc, argv, "bihtv?")) != -1){
 		switch(c){
 			case 'b':
 				sort_mode = SORT_MODE_BUBBLE;
+				break;
+			case 'i':
+				sort_mode = SORT_MODE_INSERTION;
 				break;
 			case 't':
 				measure = 1;
@@ -45,6 +48,7 @@ Get elements from file, put them in an array, and sort\n\
 \n\
 Sort mode options:\n\
   -b    do bubble sort\n\
+  -i    do insertion sort\n\
 \n\
   Other modes are not implemented yet.\n\
 \n\
@@ -105,6 +109,9 @@ General options:\n\
 	switch(sort_mode){
 		case SORT_MODE_BUBBLE:
 			array_sort_bubble(a);
+			break;
+		case SORT_MODE_INSERTION:
+			array_sort_insertion(a);
 			break;
 		default:
 			fprintf(stderr, "error: unknown sort mode\n");
