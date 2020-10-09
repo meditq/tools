@@ -11,7 +11,7 @@ char **split(char *str, int *n){
 		if(*str == '\0') break;
 		t = strchr(str, ' ');
 		if(t != NULL) *t = '\0';
-		tmp = realloc(list, sizeof(char *) * (i + 1));
+		tmp = (char **)realloc(list, sizeof(char *) * (i + 1));
 		if(tmp == NULL) break;
 		list = tmp;
 		list[i++] = str;

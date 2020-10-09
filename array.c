@@ -6,9 +6,9 @@ int expand(array a);
 int shrink(array a);
 
 array array_new(void){
-	array a = malloc(sizeof(struct _array));
+	array a = (array)malloc(sizeof(struct _array));
 	if(a == NULL) return NULL;
-	a->vs = malloc(sizeof(int));
+	a->vs = (int *)malloc(sizeof(int));
 	if(a->vs == NULL){
 		free(a);
 		return NULL;
@@ -20,7 +20,7 @@ array array_new(void){
 
 int expand(array a){
 	if(a->size >= a->heapsize){
-		int *vstmp = realloc(a->vs, sizeof(int) * a->heapsize * 2);
+		int *vstmp = (int *)realloc(a->vs, sizeof(int) * a->heapsize * 2);
 		if(vstmp == NULL) return 1;
 		a->vs = vstmp;
 		a->heapsize *= 2;
@@ -30,7 +30,7 @@ int expand(array a){
 
 int shrink(array a){
 	if(a->size <= a->heapsize / 2 && a->heapsize > 1){
-		int *vstmp = realloc(a->vs, sizeof(int) * a->heapsize / 2);
+		int *vstmp = (int *)realloc(a->vs, sizeof(int) * a->heapsize / 2);
 		if(vstmp == NULL) return 1;
 		a->vs = vstmp;
 		a->heapsize /= 2;
@@ -53,7 +53,7 @@ int pop(array a){
 array array_dup(const array a){
 	array b = array_new();
 	if(b == NULL) return NULL;
-	b->vs = realloc(b->vs, sizeof(int) * a->heapsize);
+	b->vs = (int *)realloc(b->vs, sizeof(int) * a->heapsize);
 	if(b->vs == NULL){
 		array_free(b);
 		return NULL;
