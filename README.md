@@ -5,7 +5,7 @@ Cで書かれたプログラム群
 ある程度まとまったらDocumentation書きます。
 
 ## How to Build
-```$ make all```で全てのプログラムをコンパイルできます。また、```$ make <program-name>```で個別にコンパイルすることができます。
+```make all```で全てのプログラムをコンパイルできます。また、```make <program-name>```で個別にコンパイルすることができます。
 
 ## Usage
 
