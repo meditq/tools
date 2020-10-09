@@ -34,6 +34,11 @@ Usage: `./sort [-bhtv?] [<file>]`
 ### split
 C言語用の関数群です。\_\_\_\_を参照。(スタブ)
 
+### table
+### readfile
+### duptest
+（スタブ）
+
 ## License
 このリポジトリ内の全てのファイルには[MIT License](./LICENSE)が適用されます。
 
