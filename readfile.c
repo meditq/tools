@@ -1,9 +1,9 @@
+#include "array.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <limits.h>
 #include <errno.h>
-#include "array.h"
 
 int main(int argc, char **argv){
 	FILE *fp;

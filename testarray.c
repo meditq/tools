@@ -1,12 +1,12 @@
+#include "split.h"
+#include "array.h"
+#include <readline/readline.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <time.h>
 #include <limits.h>
 #include <unistd.h>
-#include <readline/readline.h>
-#include "split.h"
-#include "array.h"
 
 int main(int argc, char **argv){
 	printf("Interactive test program for array\nCopyright (c) 2020 medit\n\n");

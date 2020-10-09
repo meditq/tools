@@ -1,3 +1,4 @@
+#include "array.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -5,7 +6,6 @@
 #include <sys/time.h>
 #include <limits.h>
 #include <errno.h>
-#include "array.h"
 
 #define SORT_MODE_BUBBLE 1
 #define SORT_MODE_INSERTION 2

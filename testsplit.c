@@ -1,8 +1,8 @@
+#include "split.h"
+#include <readline/readline.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <readline/readline.h>
-#include "split.h"
 
 int main(void){
 	char *str, **list;
