@@ -20,7 +20,7 @@ int main(int argc, char **argv){
 	srand(time(NULL));
 	while(1){
 		str = readline("array> ");
-		list = split(str, &n);
+		n = split(str, &list);
 		if(n >= 1){
 			if(!strcmp(list[0], "exit")) break;
 			else if(!strcmp(list[0], "push")){

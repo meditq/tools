@@ -4,6 +4,8 @@ Cで書かれたプログラム群
 ## How to Build
 `make all`で全てのプログラムをコンパイルできます。また、`make <program-name>`で個別にコンパイルすることができます。
 
+testarrayのコンパイルにはlibsplitが必要ですので、libsplit.aとsplit.hを同じディレクトリに置いてください。
+
 ## Usage
 
 ### sort
@@ -18,7 +20,7 @@ Usage: `./sort [-bhtv?] [<file>]`
 - 挿入ソート
 
 ### testarray
-対話的に配列を操作することができるプログラムです。[split](./split.c)を利用しています。
+対話的に配列を操作することができるプログラムです。[libsplit](https://github.com/meditq/split)を使用しています。
 
 コマンドの例
 - `push \<val\>` -- valを末尾に追加する
@@ -28,11 +30,7 @@ Usage: `./sort [-bhtv?] [<file>]`
 - `print` -- 配列の内容を出力する
 - `exit` -- 終了する
 
-### testsplit
-プロンプトに入力された文字列をスペースで分割します。[split](./split.c)を利用しています。`exit`で終了します。
-
 ### array
-### split
 C言語用の関数群です。\_\_\_\_を参照。(スタブ)
 
 ### table

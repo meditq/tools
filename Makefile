@@ -1,11 +1,8 @@
-PROGRAMS = testsplit testarray table readfile duptest sort
+PROGRAMS = testarray table readfile duptest sort
 
 all: $(PROGRAMS)
 
-testsplit: testsplit.o split.o
-	gcc -o $@ $^ -lreadline
-
-testarray: testarray.o split.o array.o
+testarray: testarray.o array.o libsplit.a
 	gcc -o $@ $^ -lreadline
 
 table: table.o
@@ -23,8 +20,8 @@ sort: sort.o array.o
 .c.o:
 	gcc -c $<
 
-split.o: split.h
 array.o: array.h
+testarray.o: split.h
 
 clean:
 	rm -f $(PROGRAMS) *.o
