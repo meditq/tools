@@ -27,4 +27,4 @@ split.o: split.h
 array.o: array.h
 
 clean:
-	rm $(PROGRAMS) *.o
+	rm -f $(PROGRAMS) *.o
