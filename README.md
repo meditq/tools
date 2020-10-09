@@ -1,9 +1,6 @@
 # tools
 Cで書かれたプログラム群
 
-## Documentation
-ある程度まとまったらDocumentation書きます。
-
 ## How to Build
 `make all`で全てのプログラムをコンパイルできます。また、`make <program-name>`で個別にコンパイルすることができます。
 
@@ -39,3 +36,4 @@ C言語用の関数群です。\_\_\_\_を参照。(スタブ)
 
 ## License
 このリポジトリ内の全てのファイルには[MIT License](./LICENSE)が適用されます。
+All source codes in this repository are available under [MIT License](./LICENSE).
