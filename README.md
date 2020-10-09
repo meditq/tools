@@ -5,14 +5,14 @@ Cで書かれたプログラム群
 ある程度まとまったらDocumentation書きます。
 
 ## How to Build
-```make all```で全てのプログラムをコンパイルできます。また、```make <program-name>```で個別にコンパイルすることができます。
+`make all`で全てのプログラムをコンパイルできます。また、`make <program-name>`で個別にコンパイルすることができます。
 
 ## Usage
 
 ### sort
 ソートするプログラムです。
 
-Usage: ```./sort [-bhtv?] [<file>]```
+Usage: `./sort [-bhtv?] [<file>]`
 
 詳しい説明は-hオプションで確認できます。
 
@@ -31,11 +31,11 @@ Usage: ```./sort [-bhtv?] [<file>]```
 - print -- 配列の内容を出力する
 
 ### testsplit
-プロンプトに入力された文字列をスペースで分割します。[split](./split.c)を利用しています。```exit```で終了します。
+プロンプトに入力された文字列をスペースで分割します。[split](./split.c)を利用しています。`exit`で終了します。
 
 ### array
 ### split
-C言語用の関数群です。____を参照。(スタブ)
+C言語用の関数群です。\_\_\_\_を参照。(スタブ)
 
 ## License
 このリポジトリ内の全てのファイルには[MIT License](./LICENSE)が適用されます。
