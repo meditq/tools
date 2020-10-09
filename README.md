@@ -36,4 +36,5 @@ C言語用の関数群です。\_\_\_\_を参照。(スタブ)
 
 ## License
 このリポジトリ内の全てのファイルには[MIT License](./LICENSE)が適用されます。
+
 All source codes in this repository are available under [MIT License](./LICENSE).
