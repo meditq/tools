@@ -1,3 +1,8 @@
+/*
+    Copyright (c) 2020 medit
+    Distributed under the MIT License. See ./LICENSE.
+*/
+
 #include "array.h"
 #include <stdio.h>
 #include <stdlib.h>
