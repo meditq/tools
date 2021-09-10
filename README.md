@@ -4,7 +4,7 @@ Cで書かれたプログラム群
 ## How to Build
 `make all`で全てのプログラムをコンパイルできます。また、`make <program-name>`で個別にコンパイルすることができます。
 
-testarrayのコンパイルにはlibsplitが必要ですので、libsplit.aとsplit.hを同じディレクトリに置いてください。
+testarrayのコンパイルには[libsplit](https://github.com/meditq/split)が必要ですので、libsplit.aとsplit.hを同じディレクトリに置いてください。
 
 ## Usage
 
